@@ -1,8 +1,9 @@
-let user_input = document.getElementById("dob");
-user_input.max = new Date().toISOString().split("T")[0];
+let user_Input = document.getElementById("dob");
+user_Input.max = new Date().toISOString().split("T")[0];
 let result = document.getElementById("result");
-function calculate_Age(user_input){
-    let birthdate = new Date (user_input);
+function calculate_Age(user_input)
+{
+    let birthdate = new Date (user_Input.value);
 
     let d1 = birthdate.getDate();
     let m1 = birthdate.getMonth() + 1;
@@ -26,7 +27,7 @@ function calculate_Age(user_input){
 
     let d3;
     if(d2>=d1){
-        d2-d1;
+        d3 = d2-d1;
     }else{
         m3--;
         d3 = getDaysInMonth(y1,m1) + d2 - d1;
